@@ -52,9 +52,11 @@ public class Player : MonoBehaviour
 
 	void Update()
     {
+		// woosh effect if speed is above some threshold
         current_speed = player_body.velocity.x;
-		//player_body.AddForce(Vector2.right * current_speed);
+        
 
+        // up and down movement
         if (ascending) 
         {
 			player_body.velocity = new Vector2(player_body.velocity.x, 5.0f);
@@ -65,6 +67,7 @@ public class Player : MonoBehaviour
 			player_body.velocity = new Vector2(player_body.velocity.x, -5.0f);
 		}
 
+        // move the camera with us
         main_camera.transform.position = new Vector3(transform.position.x + camera_distance, main_camera.transform.position.y, main_camera.transform.position.z);
 	}
 
