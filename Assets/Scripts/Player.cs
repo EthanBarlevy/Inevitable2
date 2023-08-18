@@ -11,8 +11,10 @@ public class Player : MonoBehaviour
     private Rigidbody2D player_body;
 
 	[SerializeField] private PlayerData player_data;
+    [SerializeField] private Camera main_camera;
     [SerializeField] private float current_speed = -1;
     [SerializeField] private float current_size = -1;
+    [SerializeField] private int camera_distance = 0;
 
     public PlayerInput player_actions;
     private InputAction ascend;
@@ -51,7 +53,7 @@ public class Player : MonoBehaviour
 	void Update()
     {
         current_speed = player_body.velocity.x;
-		player_body.AddForce(Vector2.right * current_speed);
+		//player_body.AddForce(Vector2.right * current_speed);
 
         if (ascending) 
         {
@@ -62,6 +64,8 @@ public class Player : MonoBehaviour
         {
 			player_body.velocity = new Vector2(player_body.velocity.x, -5.0f);
 		}
+
+        main_camera.transform.position = new Vector3(transform.position.x + camera_distance, main_camera.transform.position.y, main_camera.transform.position.z);
 	}
 
     private void Ascend(InputAction.CallbackContext context)
