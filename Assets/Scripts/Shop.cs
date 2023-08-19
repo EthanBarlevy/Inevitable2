@@ -6,6 +6,8 @@ using UnityEngine.InputSystem.LowLevel;
 public class Shop : MonoBehaviour, IDataPersistance
 {
 	[Header("ShopMaximums")]
+	[SerializeField] private float speed_max;
+	[SerializeField] private float boost_speed_max;
 	[SerializeField] private float frequency_max;
 	[SerializeField] private float ice_amount_max;
 
@@ -22,17 +24,26 @@ public class Shop : MonoBehaviour, IDataPersistance
 
 	public void BuySpeed()
 	{
-		speed++;
+		if(speed < speed_max) 
+		{ 
+			speed++;
+		}
     }
 
 	public void BuyBoostSpeed()
 	{
-		boost_speed++;
+		if (speed < boost_speed_max)
+		{
+			boost_speed++;
+		}
 	}
 
 	public void BuyBoostFrequency()
 	{
-		boost_frequency++;
+		if (boost_frequency < frequency_max)
+		{ 
+			boost_frequency++;
+		}
 	}
 
 	public void BuyFireTime()
@@ -42,17 +53,26 @@ public class Shop : MonoBehaviour, IDataPersistance
 
 	public void BuyFireFrequency()
 	{
-		fire_frequency++;
+		if (fire_frequency < frequency_max)
+		{ 
+			fire_frequency++;
+		}
 	}
 
 	public void BuyIceAmount()
 	{
-		ice_amount++;
+		if (ice_amount < ice_amount_max)
+		{ 
+			ice_amount++;
+		}
 	}
 
 	public void BuyIceFrequency()
 	{
-		ice_frequency++;
+		if (ice_frequency < frequency_max)
+		{ 
+			ice_frequency++;
+		}
 	}
 
 	public void LoadData(GameData data)

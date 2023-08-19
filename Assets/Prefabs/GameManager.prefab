@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5881305619259638542
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5881305619259638543}
+  - component: {fileID: 5881305619259638536}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5881305619259638543
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5881305619259638542}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.97618717, y: 0.38610154, z: 7.6846213}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5881305619259638536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5881305619259638542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73f2b19b88013814ab40f11ee7d3e462, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  screens:
+  - {fileID: 3790170648558408111, guid: f6c4f45fd80268e4ebddddba9eb8a4d6, type: 3}
+  - {fileID: 3790170648558408111, guid: ca88e04bb46ba784f88fdfbdb8620210, type: 3}
+  - {fileID: 3790170648558408111, guid: a58d4217b1abce847b8ea007eec51d13, type: 3}
+  - {fileID: 3790170648558408111, guid: 5495b8fa13435a54e92a45eddf6be907, type: 3}
+  - {fileID: 3790170648558408111, guid: 08cdd3ec6401f59419ee5e8527507349, type: 3}
+  player: {fileID: 259230123304692909, guid: 234899a360d47bf439ff86317c2e455f, type: 3}
+  shop: {fileID: 4592680174697084320, guid: 20ceb174940f68b48aa7717fcd0959fa, type: 3}
+  start_screen_ui: {fileID: 6559501929380940309, guid: 00fa208880bb82f43af4f26ce885925b, type: 3}
+  shop_screen_ui: {fileID: 6670410085568673618, guid: 1ec1f77c411ca2042b4f70f7eb503a7a, type: 3}
+  in_game_screen_ui: {fileID: 4434178125898016126, guid: 1c528a67dd4339546a7383c8de8b0d99, type: 3}
