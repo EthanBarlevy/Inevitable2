@@ -11,6 +11,8 @@ public class Player : MonoBehaviour
     private Rigidbody2D player_body;
     private SpriteRenderer player_sprite;
 
+	private Transform player_transform;
+
 	[SerializeField] private PlayerData player_data;
     [SerializeField] private Camera main_camera;
     [SerializeField] private float current_speed = -1;
@@ -27,8 +29,10 @@ public class Player : MonoBehaviour
         player_body = GetComponent<Rigidbody2D>();
         player_sprite = GetComponent<SpriteRenderer>();
 
-        // take from the data
-        current_speed = player_data.initial_speed;
+		player_transform = GetComponent<Transform>();
+
+		// take from the data
+		current_speed = player_data.initial_speed;
         current_size = player_data.initial_size;
 
         // set the initial velocity
@@ -62,6 +66,7 @@ public class Player : MonoBehaviour
         if (ascending) 
         {
 			player_body.velocity = new Vector2(player_body.velocity.x, 5.0f);
+		   // player_transform.localRotation.
 
 			// keep player from going off the screen
 			if (transform.position.y + player_sprite.size.y / 2 > 5)
@@ -88,10 +93,12 @@ public class Player : MonoBehaviour
     private void Ascend(InputAction.CallbackContext context)
     {
         ascending = true;
+
 	}
 
 	private void Descend(InputAction.CallbackContext context)
 	{
 		ascending = false;
+		//player_transform.localRotation = Quaternion.Euler(0, 0, -45);
 	}
 }
