@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
 {
     private CircleCollider2D player_collider;
     private Rigidbody2D player_body;
+    private SpriteRenderer player_sprite;
 
 	[SerializeField] private PlayerData player_data;
     [SerializeField] private Camera main_camera;
@@ -19,10 +20,12 @@ public class Player : MonoBehaviour
     public PlayerInput player_actions;
     private InputAction ascend;
     private bool ascending = false;
+
     void Start()
     {
         player_collider = GetComponent<CircleCollider2D>();
         player_body = GetComponent<Rigidbody2D>();
+        player_sprite = GetComponent<SpriteRenderer>();
 
         // take from the data
         current_speed = player_data.initial_speed;
@@ -54,27 +57,39 @@ public class Player : MonoBehaviour
     {
 		// woosh effect if speed is above some threshold
         current_speed = player_body.velocity.x;
-        
 
         // up and down movement
         if (ascending) 
         {
 			player_body.velocity = new Vector2(player_body.velocity.x, 5.0f);
-            
+
+			// keep player from going off the screen
+			if (transform.position.y + player_sprite.size.y / 2 > 5)
+			{
+				player_body.velocity = new Vector2(player_body.velocity.x, 0.0f);
+			}
 		}
         else 
         {
 			player_body.velocity = new Vector2(player_body.velocity.x, -5.0f);
+
+			// keep player from going off the screen
+			if (transform.position.y - player_sprite.size.y / 2 < -5)
+            {
+				player_body.velocity = new Vector2(player_body.velocity.x, 0.0f);
+			}
 		}
 
-        // move the camera with us
+        // move the camera with the player
         main_camera.transform.position = new Vector3(transform.position.x + camera_distance, main_camera.transform.position.y, main_camera.transform.position.z);
-	}
+	    
+    }
 
     private void Ascend(InputAction.CallbackContext context)
     {
         ascending = true;
 	}
+
 	private void Descend(InputAction.CallbackContext context)
 	{
 		ascending = false;

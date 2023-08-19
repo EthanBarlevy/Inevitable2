@@ -282,7 +282,7 @@ GameObject:
   - component: {fileID: 2536558921408833960}
   - component: {fileID: 3461082307204539942}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: ShopScreenUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

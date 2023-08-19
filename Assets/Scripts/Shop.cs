@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem.LowLevel;
 
-public class Shop : IDataPersistance
+public class Shop : MonoBehaviour, IDataPersistance
 {
 	[Header("ShopMaximums")]
 	[SerializeField] private float frequency_max;
