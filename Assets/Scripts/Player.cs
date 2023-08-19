@@ -14,7 +14,6 @@ public class Player : MonoBehaviour
 
 	[SerializeField] private PlayerData player_data;
     [SerializeField] private Camera main_camera;
-    //[SerializeField] private Manager game_manager;
     [SerializeField] public float current_speed = -1;
     [SerializeField] public float current_size = -1;
     [SerializeField] private int camera_distance = 0;
@@ -24,18 +23,14 @@ public class Player : MonoBehaviour
     private bool ascending = false;
     private Manager.GameState game_state;
 
+    private float invincibility_time;
+
     void Start()
     {
         player_collider = GetComponent<CircleCollider2D>();
         player_body = GetComponent<Rigidbody2D>();
         player_sprite = GetComponent<SpriteRenderer>();
 		player_transform = GetComponent<Transform>();
-
-        //game_data = game_manager.GetShopData();
-
-		
-
-        // set the initial velocity
     }
 
 	private void Awake()
@@ -100,6 +95,11 @@ public class Player : MonoBehaviour
 
         // update size
         gameObject.transform.localScale = new Vector3(current_size, current_size, current_size);
+
+        if(invincibility_time > 0) 
+        {
+            invincibility_time -= Time.deltaTime;
+        }
     }
 
     public void SetGameState(Manager.GameState new_state)
@@ -110,8 +110,11 @@ public class Player : MonoBehaviour
 
     public void ChangeSpeedAndSize(float speed, float size)
     {
-        current_speed += speed;
-        current_size += size;
+        if (invincibility_time <= 0)
+        { 
+            current_speed += speed;
+            current_size += size;
+        }
 
         player_body.velocity = new Vector3(current_speed, player_body.velocity.y);
     }
@@ -120,12 +123,17 @@ public class Player : MonoBehaviour
     {
 		// take from the data
 		player_data.initial_speed = FindObjectOfType<Manager>().GetStartSpeed();
+		player_data.initial_size = FindObjectOfType<Manager>().GetStartSize();
 		current_speed = player_data.initial_speed;
 		current_size = player_data.initial_size;
 
-
 		player_body.velocity = Vector2.right * current_speed;
 	}
+
+    public void AddInvincibility(float time)
+    {
+        invincibility_time += time;
+    }
 
     private void Ascend(InputAction.CallbackContext context)
     {

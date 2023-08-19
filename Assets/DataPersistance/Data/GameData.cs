@@ -8,6 +8,7 @@ public class GameData
 {
 	public int rokxz;
 	public float speed;
+	public float size;
 	public float boost_speed;
 	public float boost_frequency;
 	public float fire_time;
@@ -19,7 +20,8 @@ public class GameData
 	public GameData()
 	{ 
 		this.rokxz = 0;
-		this.speed = 0;
+		this.speed = 5;
+		this.size = 1;
 		this.boost_speed = 0;
 		this.boost_frequency = 0;
 		this.fire_time = 0;
@@ -29,10 +31,11 @@ public class GameData
 		this.score = new BigInteger();
 	}
 
-	public GameData(int rokxz, float speed, float boost_speed, float boost_frequency, float fire_time, float fire_frequency, float ice_amount, float ice_frequency, BigInteger score)
+	public GameData(int rokxz, float speed, float size, float boost_speed, float boost_frequency, float fire_time, float fire_frequency, float ice_amount, float ice_frequency, BigInteger score)
 	{
 		this.rokxz = rokxz;
 		this.speed = speed;
+		this.size = size;
 		this.boost_speed = boost_speed;
 		this.boost_frequency = boost_frequency;
 		this.fire_time = fire_time;

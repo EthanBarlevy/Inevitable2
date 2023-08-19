@@ -136,29 +136,27 @@ public class Manager : MonoBehaviour
 	{
 		GameObject next_screen;
 		bool planet = false;
-		//foreach (int number in number_of_screens)
-		//{
-		//	if (number == current_screen_number)
-		//	{
-		//		planet = true;
-		//	}
-		//}
-		//if (planet)
-		//{
-		//	next_screen = planet_screens[Random.Range(0, planet_screens.Length - 1)];
-		//}
-		//else 
-		//{ 
-		//	next_screen = screens[Random.Range(0, screens.Length - 1)];
-		//}
-		next_screen = screens[Random.Range(0, screens.Length - 1)];
+		foreach (int number in number_of_screens)
+		{
+			if (number == current_screen_number)
+			{
+				planet = true;
+			}
+		}
+		if (planet)
+		{
+			next_screen = planet_screens[Random.Range(0, planet_screens.Length - 1)];
+		}
+		else
+		{
+			next_screen = screens[Random.Range(0, screens.Length - 1)];
+		}
 		Instantiate(next_screen, new Vector3(9.6f + 19.2f * current_screen_number, 0, 0), world.transform.rotation, world.transform);
 		List<Screen> children = new List<Screen>();
 		foreach (Screen child in world.GetComponentsInChildren<Screen>())
 		{
 			children.Add(child);
 		}
-		//Debug.Log(children.Count());
 		Destroy(children[0].gameObject);
 		current_screen_number++;
 	}
@@ -193,5 +191,15 @@ public class Manager : MonoBehaviour
 	public float GetStartSpeed()
 	{
 		return shop.speed;
+	}
+
+	public float GetStartSize()
+	{
+		return shop.size;
+	}
+
+	public GameData GetData()
+	{ 
+		return new GameData(shop.rokxz, shop.speed, shop.size, shop.boost_speed, shop.boost_frequency, shop.fire_time, shop.boost_frequency, shop.ice_amount, shop.ice_frequency, new System.Numerics.BigInteger());
 	}
 }

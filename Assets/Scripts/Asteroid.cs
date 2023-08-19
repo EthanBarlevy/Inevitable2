@@ -8,11 +8,6 @@ public class Asteroid : Damageable
     private float rotation;
     private Manager manager;
 
-    [Header("Value")]
-    private int value;
-    [SerializeField] private int min_value;
-    [SerializeField] private int max_value;
-
     void Start()
     {
         movement = new Vector2(Random.value, Random.value);
@@ -32,15 +27,15 @@ public class Asteroid : Damageable
 
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
-        if (manager.GetPlayerNewtons() > newtons)
-        {
-            manager.AffectPlayer(speed, size);
-            manager.AddRokxs(value);
-            Destroy(gameObject);
-        }
-        else 
-        {
-            manager.StopPlayer();
-        }
+		if (manager.GetPlayerNewtons() > newtons)
+		{
+			manager.AffectPlayer(speed, size);
+			manager.AddRokxs(value);
+			Destroy(gameObject);
+		}
+		else
+		{
+			manager.StopPlayer();
+		}
 	}
 }

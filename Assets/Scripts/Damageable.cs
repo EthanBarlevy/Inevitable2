@@ -8,4 +8,9 @@ public class Damageable : MonoBehaviour
     [Header ("Player Reductions")]
     [SerializeField] public float speed;
     [SerializeField] public float size;
+
+	[Header("Value")]
+	protected int value;
+	[SerializeField] protected int min_value;
+	[SerializeField] protected int max_value;
 }

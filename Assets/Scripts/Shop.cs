@@ -7,6 +7,7 @@ public class Shop : MonoBehaviour, IDataPersistance
 {
 	[Header("ShopMaximums")]
 	[SerializeField] private float speed_max;
+	[SerializeField] private float size_max;
 	[SerializeField] private float boost_speed_max;
 	[SerializeField] private float frequency_max;
 	[SerializeField] private float ice_amount_max;
@@ -14,6 +15,7 @@ public class Shop : MonoBehaviour, IDataPersistance
 	[Header("CurrentPurchases")]
 	public int rokxz;
 	public float speed;
+	public float size;
 	public float boost_speed;
 	public float boost_frequency;
 	public float fire_time;
@@ -29,6 +31,14 @@ public class Shop : MonoBehaviour, IDataPersistance
 			speed++;
 		}
     }
+
+	public void BuySize()
+	{
+		if (size < size_max)
+		{
+			size += 0.3f;
+		}
+	}
 
 	public void BuyBoostSpeed()
 	{
@@ -79,6 +89,7 @@ public class Shop : MonoBehaviour, IDataPersistance
 	{
 		this.rokxz = data.rokxz;
 		this.speed = data.speed;
+		this.size = data.size;
 		this.boost_speed = data.boost_speed;
 		this.boost_frequency = data.boost_frequency;
 		this.fire_time = data.fire_time;
@@ -91,6 +102,7 @@ public class Shop : MonoBehaviour, IDataPersistance
 	{
 		data.rokxz = this.rokxz;
 		data.speed = this.speed;
+		data.size = this.size;
 		data.boost_speed = this.boost_speed;
 		data.boost_frequency = this.boost_frequency;
 		data.fire_time = this.fire_time;
