@@ -144,9 +144,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawn_locations:
-  - {fileID: 0}
-  powerups:
-  - {fileID: 651834394497118333, guid: be1a2047d9536db428836ff0017d9c07, type: 3}
+  - {fileID: 6736748135181068800}
+  boost_powerup: {fileID: 651834394497118333, guid: 7b26e628e640d55439e954ac5ca0c8e7, type: 3}
+  fire_powerup: {fileID: 651834394497118333, guid: be1a2047d9536db428836ff0017d9c07, type: 3}
+  ice_powerup: {fileID: 651834394497118333, guid: 331b0df673246ab4f8b6f7e5a814c179, type: 3}
 --- !u!1 &6907544286401586825
 GameObject:
   m_ObjectHideFlags: 0
@@ -308,6 +309,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5881305619259638536, guid: 0b5db62cc730b7a4eaa181d16e146c43, type: 3}
     - target: {fileID: 7599415632825572080, guid: 484bd968d1f30514285d6d68fb9e030a, type: 3}
+      propertyPath: particle
+      value: 
+      objectReference: {fileID: 3599778291994443633, guid: 24eb75988df16fe46a65fe4975ee3eea, type: 3}
+    - target: {fileID: 7599415632825572080, guid: 484bd968d1f30514285d6d68fb9e030a, type: 3}
       propertyPath: max_value
       value: 10
       objectReference: {fileID: 0}
@@ -389,6 +394,10 @@ PrefabInstance:
       propertyPath: manager
       value: 
       objectReference: {fileID: 5881305619259638536, guid: 0b5db62cc730b7a4eaa181d16e146c43, type: 3}
+    - target: {fileID: 7599415632825572080, guid: 069c463fc7f9d33409786d2c5c59a688, type: 3}
+      propertyPath: particle
+      value: 
+      objectReference: {fileID: 3599778291994443633, guid: 24eb75988df16fe46a65fe4975ee3eea, type: 3}
     - target: {fileID: 7599415632825572080, guid: 069c463fc7f9d33409786d2c5c59a688, type: 3}
       propertyPath: max_value
       value: 5
@@ -472,6 +481,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5881305619259638536, guid: 0b5db62cc730b7a4eaa181d16e146c43, type: 3}
     - target: {fileID: 7599415632825572080, guid: 069c463fc7f9d33409786d2c5c59a688, type: 3}
+      propertyPath: particle
+      value: 
+      objectReference: {fileID: 3599778291994443633, guid: 24eb75988df16fe46a65fe4975ee3eea, type: 3}
+    - target: {fileID: 7599415632825572080, guid: 069c463fc7f9d33409786d2c5c59a688, type: 3}
       propertyPath: max_value
       value: 5
       objectReference: {fileID: 0}
@@ -553,6 +566,10 @@ PrefabInstance:
       propertyPath: manager
       value: 
       objectReference: {fileID: 5881305619259638536, guid: 0b5db62cc730b7a4eaa181d16e146c43, type: 3}
+    - target: {fileID: 7599415632825572080, guid: 069c463fc7f9d33409786d2c5c59a688, type: 3}
+      propertyPath: particle
+      value: 
+      objectReference: {fileID: 3599778291994443633, guid: 24eb75988df16fe46a65fe4975ee3eea, type: 3}
     - target: {fileID: 7599415632825572080, guid: 069c463fc7f9d33409786d2c5c59a688, type: 3}
       propertyPath: max_value
       value: 5
@@ -636,6 +653,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5881305619259638536, guid: 0b5db62cc730b7a4eaa181d16e146c43, type: 3}
     - target: {fileID: 7599415632825572080, guid: 069c463fc7f9d33409786d2c5c59a688, type: 3}
+      propertyPath: particle
+      value: 
+      objectReference: {fileID: 3599778291994443633, guid: 24eb75988df16fe46a65fe4975ee3eea, type: 3}
+    - target: {fileID: 7599415632825572080, guid: 069c463fc7f9d33409786d2c5c59a688, type: 3}
       propertyPath: max_value
       value: 5
       objectReference: {fileID: 0}
@@ -718,6 +739,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5881305619259638536, guid: 0b5db62cc730b7a4eaa181d16e146c43, type: 3}
     - target: {fileID: 7599415632825572080, guid: 484bd968d1f30514285d6d68fb9e030a, type: 3}
+      propertyPath: particle
+      value: 
+      objectReference: {fileID: 3599778291994443633, guid: 24eb75988df16fe46a65fe4975ee3eea, type: 3}
+    - target: {fileID: 7599415632825572080, guid: 484bd968d1f30514285d6d68fb9e030a, type: 3}
       propertyPath: max_value
       value: 10
       objectReference: {fileID: 0}
@@ -787,11 +812,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6810989972533185689, guid: c5d79c7f82ecd50499e8298c6fe96316, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c5d79c7f82ecd50499e8298c6fe96316, type: 3}
 --- !u!4 &1349008346422486981 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8242755657390413032, guid: c5d79c7f82ecd50499e8298c6fe96316, type: 3}
+  m_PrefabInstance: {fileID: 6979600207035265837}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6736748135181068800 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4440894293819414829, guid: c5d79c7f82ecd50499e8298c6fe96316, type: 3}
   m_PrefabInstance: {fileID: 6979600207035265837}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7299467899069208115
@@ -861,6 +892,10 @@ PrefabInstance:
       propertyPath: manager
       value: 
       objectReference: {fileID: 5881305619259638536, guid: 0b5db62cc730b7a4eaa181d16e146c43, type: 3}
+    - target: {fileID: 7599415632825572080, guid: 069c463fc7f9d33409786d2c5c59a688, type: 3}
+      propertyPath: particle
+      value: 
+      objectReference: {fileID: 3599778291994443633, guid: 24eb75988df16fe46a65fe4975ee3eea, type: 3}
     - target: {fileID: 7599415632825572080, guid: 069c463fc7f9d33409786d2c5c59a688, type: 3}
       propertyPath: max_value
       value: 5
@@ -944,6 +979,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5881305619259638536, guid: 0b5db62cc730b7a4eaa181d16e146c43, type: 3}
     - target: {fileID: 7599415632825572080, guid: 484bd968d1f30514285d6d68fb9e030a, type: 3}
+      propertyPath: particle
+      value: 
+      objectReference: {fileID: 3599778291994443633, guid: 24eb75988df16fe46a65fe4975ee3eea, type: 3}
+    - target: {fileID: 7599415632825572080, guid: 484bd968d1f30514285d6d68fb9e030a, type: 3}
       propertyPath: max_value
       value: 10
       objectReference: {fileID: 0}
@@ -1025,6 +1064,10 @@ PrefabInstance:
       propertyPath: manager
       value: 
       objectReference: {fileID: 5881305619259638536, guid: 0b5db62cc730b7a4eaa181d16e146c43, type: 3}
+    - target: {fileID: 7599415632825572080, guid: 484bd968d1f30514285d6d68fb9e030a, type: 3}
+      propertyPath: particle
+      value: 
+      objectReference: {fileID: 3599778291994443633, guid: 24eb75988df16fe46a65fe4975ee3eea, type: 3}
     - target: {fileID: 7599415632825572080, guid: 484bd968d1f30514285d6d68fb9e030a, type: 3}
       propertyPath: max_value
       value: 10
@@ -1108,6 +1151,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5881305619259638536, guid: 0b5db62cc730b7a4eaa181d16e146c43, type: 3}
     - target: {fileID: 7599415632825572080, guid: 069c463fc7f9d33409786d2c5c59a688, type: 3}
+      propertyPath: particle
+      value: 
+      objectReference: {fileID: 3599778291994443633, guid: 24eb75988df16fe46a65fe4975ee3eea, type: 3}
+    - target: {fileID: 7599415632825572080, guid: 069c463fc7f9d33409786d2c5c59a688, type: 3}
       propertyPath: max_value
       value: 5
       objectReference: {fileID: 0}
@@ -1190,6 +1237,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5881305619259638536, guid: 0b5db62cc730b7a4eaa181d16e146c43, type: 3}
     - target: {fileID: 7599415632825572080, guid: 484bd968d1f30514285d6d68fb9e030a, type: 3}
+      propertyPath: particle
+      value: 
+      objectReference: {fileID: 3599778291994443633, guid: 24eb75988df16fe46a65fe4975ee3eea, type: 3}
+    - target: {fileID: 7599415632825572080, guid: 484bd968d1f30514285d6d68fb9e030a, type: 3}
       propertyPath: max_value
       value: 10
       objectReference: {fileID: 0}
@@ -1271,6 +1322,10 @@ PrefabInstance:
       propertyPath: manager
       value: 
       objectReference: {fileID: 5881305619259638536, guid: 0b5db62cc730b7a4eaa181d16e146c43, type: 3}
+    - target: {fileID: 7599415632825572080, guid: 069c463fc7f9d33409786d2c5c59a688, type: 3}
+      propertyPath: particle
+      value: 
+      objectReference: {fileID: 3599778291994443633, guid: 24eb75988df16fe46a65fe4975ee3eea, type: 3}
     - target: {fileID: 7599415632825572080, guid: 069c463fc7f9d33409786d2c5c59a688, type: 3}
       propertyPath: max_value
       value: 5

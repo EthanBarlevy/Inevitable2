@@ -7,7 +7,7 @@ public class Asteroid : Damageable
     private Vector3 movement;
     private float rotation;
     private Manager manager;
-
+    [SerializeField] GameObject particle;
     void Start()
     {
         movement = new Vector2(Random.value, Random.value);
@@ -31,6 +31,7 @@ public class Asteroid : Damageable
 		{
 			manager.AffectPlayer(speed, size);
 			manager.AddRokxs(value);
+            Instantiate(particle, transform.position, transform.rotation);
 			Destroy(gameObject);
 		}
 		else

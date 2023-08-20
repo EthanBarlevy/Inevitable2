@@ -15,15 +15,12 @@ public class FirePowerup : Powerup
 	}
 	public void OnTriggerEnter2D(Collider2D collision)
 	{
-		if (collision.tag == "Player")
-		{
 			//FindObjectOfType<Player>().AddInvincibility(data.fire_time);
 			//collision.gameObject.GetComponent<Player>().AddInvincibility(data.fire_time);
-			manager.MakeInvincible(data.fire_time);
+			manager.MakeInvincible(manager.GetData().fire_time);
 			//collision.gameObject.GetComponent<Player>().AddInvincibility(data.fire_time);
 			//	collision.gameObject.GetComponent<TrailRenderer>().colorGradient;
 			Destroy(gameObject);
-		}
 	}
 
 	

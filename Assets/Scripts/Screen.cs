@@ -6,7 +6,9 @@ using System.Linq;
 public class Screen : MonoBehaviour
 {
 	[SerializeField] GameObject[] spawn_locations;
-	[SerializeField] GameObject[] powerups;
+	[SerializeField] GameObject boost_powerup;
+	[SerializeField] GameObject fire_powerup;
+	[SerializeField] GameObject ice_powerup;
 
 	private void Start()
 	{
@@ -31,17 +33,20 @@ public class Screen : MonoBehaviour
 
 		if (spawn.Count > 0)
 		{
-			switch (spawn[Random.Range(0, spawn.Count - 1)].Value)
-			{
-				case 1:
-					Instantiate(powerups[0], spawn_locations[Random.Range(0, spawn_locations.Length)].transform.position, transform.rotation, transform);
-					break;
-				case 2:
-					Instantiate(powerups[1], spawn_locations[Random.Range(0, spawn_locations.Length)].transform.position, transform.rotation, transform);
-					break;
-				case 3:
-					Instantiate(powerups[2], spawn_locations[Random.Range(0, spawn_locations.Length)].transform.position, transform.rotation, transform);
-					break;
+			if (spawn_locations.Length > 0)
+			{ 
+				switch (spawn[Random.Range(0, spawn.Count)].Value)
+				{
+					case 1:
+						Instantiate(boost_powerup, spawn_locations[Random.Range(0, spawn_locations.Length)].transform.position, transform.rotation, transform);
+						break;
+					case 2:
+						Instantiate(fire_powerup, spawn_locations[Random.Range(0, spawn_locations.Length)].transform.position, transform.rotation, transform);
+						break;
+					case 3:
+						Instantiate(ice_powerup, spawn_locations[Random.Range(0, spawn_locations.Length)].transform.position, transform.rotation, transform);
+						break;
+				}
 			}
 		}
 	}

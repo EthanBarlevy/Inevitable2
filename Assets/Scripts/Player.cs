@@ -32,6 +32,8 @@ public class Player : MonoBehaviour
         player_body = GetComponent<Rigidbody2D>();
         player_sprite = GetComponent<SpriteRenderer>();
 		player_transform = GetComponent<Transform>();
+
+        //main_camera = Instantiate(main_camera);
     }
 
 	private void Awake()
@@ -69,38 +71,27 @@ public class Player : MonoBehaviour
         // up and down movement
         if (ascending)
         {
-			// player_body.velocity = new Vector2(player_body.velocity.x, 5.0f);
-			player_body.AddForce(new Vector2(0, 600.0f * Time.deltaTime));
-            // player_transform.localRotation.
-
             // keep player from going off the screen
             if (transform.position.y + player_sprite.size.y / 2 > 5)
             {
-
                 player_body.velocity = new Vector2(player_body.velocity.x, 0.0f);
-				//clamp to top of screen
-				transform.position = new Vector3(transform.position.x, 5, transform.position.z);
 
+            }
+            else if (game_state == Manager.GameState.GAMEPLAY)
+            {
+				player_body.AddForce(new Vector2(0, 600.0f * Time.deltaTime));
 			}
         }
         else
         {
-            if (game_state == Manager.GameState.GAMEPLAY)
-            {
-				//player_body.velocity = new Vector2(player_body.velocity.x, -5.0f);
-				player_body.AddForce(new Vector2(0, -300.0f*Time.deltaTime));
-			}
-
             // keep player from going off the screen
             if (transform.position.y - player_sprite.size.y / 2 < -5)
             {
-
-
                 player_body.velocity = new Vector2(player_body.velocity.x, 0.0f);
-				//remove all vertical force
-				
-				
-
+			}
+            else if (game_state == Manager.GameState.GAMEPLAY)
+			{
+				player_body.AddForce(new Vector2(0, -300.0f * Time.deltaTime));
 			}
 		}
 

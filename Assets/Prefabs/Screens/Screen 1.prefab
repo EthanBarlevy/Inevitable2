@@ -142,8 +142,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawn_locations:
   - {fileID: 2614389927818160784}
-  powerups:
-  - {fileID: 651834394497118333, guid: be1a2047d9536db428836ff0017d9c07, type: 3}
+  boost_powerup: {fileID: 651834394497118333, guid: 7b26e628e640d55439e954ac5ca0c8e7, type: 3}
+  fire_powerup: {fileID: 651834394497118333, guid: be1a2047d9536db428836ff0017d9c07, type: 3}
+  ice_powerup: {fileID: 651834394497118333, guid: 331b0df673246ab4f8b6f7e5a814c179, type: 3}
 --- !u!1 &6549461900658042173
 GameObject:
   m_ObjectHideFlags: 0
@@ -283,7 +284,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6810989972533185689, guid: c5d79c7f82ecd50499e8298c6fe96316, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c5d79c7f82ecd50499e8298c6fe96316, type: 3}
 --- !u!1 &2614389927818160784 stripped
 GameObject:

@@ -104,7 +104,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player_data: {fileID: 11400000, guid: 5a65085290a0e9045ae3224047fde663, type: 2}
-  main_camera: {fileID: 0}
+  main_camera: {fileID: 9209911101217839652, guid: 3b6bef08dfb26aa439a2bff24e082c0e, type: 3}
   current_speed: -1
   current_size: -1
   camera_distance: 4

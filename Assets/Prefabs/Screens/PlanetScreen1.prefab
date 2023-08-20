@@ -48,7 +48,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawn_locations: []
-  powerups: []
+  boost_powerup: {fileID: 0}
+  fire_powerup: {fileID: 0}
+  ice_powerup: {fileID: 0}
 --- !u!1 &4193862992651162518
 GameObject:
   m_ObjectHideFlags: 0
@@ -347,7 +349,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newtons: 20
-  speed: 2
+  speed: 5
   size: 0
   min_value: 100
   max_value: 200

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -58,6 +59,7 @@ public class Manager : MonoBehaviour
 				in_game_screen_ui.SetActive(true);
 				break;
 			case GameState.END_OF_RUN:
+				end_of_run_ui.SetActive(true);
 				break;
 			case GameState.CUTSCENE:
 				
@@ -88,6 +90,18 @@ public class Manager : MonoBehaviour
 		{
 			SetStateGameplay();
 			player.StartGame();
+		}
+		if (game_state == GameState.END_OF_RUN)
+		{ 
+			SetStateStartGame();
+			HideUI();
+			player.transform.position = new Vector3(-5, 0, 0);
+			current_screen_number = -1;
+			SpawnNextScreen();
+			SpawnNextScreen();
+			SpawnNextScreen();
+			//Destroy(player);
+			//player = Instantiate(player);
 		}
 	}
 
@@ -125,6 +139,7 @@ public class Manager : MonoBehaviour
 		start_screen_ui.SetActive(false);
 		shop_screen_ui.SetActive(false);
 		in_game_screen_ui.SetActive(false);
+		end_of_run_ui.SetActive(false);
 	}
 
 	public void AddRokxs(int amount)
@@ -186,12 +201,16 @@ public class Manager : MonoBehaviour
 		return player.current_speed * player.current_size;
 
 	}
-	
-	
+
+	public float GetPlayerDistance()
+	{
+		return player.transform.position.x + 5;
+	}
 
 	public void StopPlayer()
 	{
 		player.ChangeSpeedAndSize(-player.current_speed, -player.current_size);
+		HideUI();
 		game_state = GameState.END_OF_RUN;
 	}
 
