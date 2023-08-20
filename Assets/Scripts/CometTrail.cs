@@ -18,7 +18,7 @@ public class CometTrail : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-		trail.startWidth = parent_transform.localScale.x-.4f;
+		trail.startWidth = parent_transform.localScale.x+.4f;
 		//trail.widthMultiplier = parent_transform.localScale.x;
 		
 	}

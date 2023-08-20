@@ -176,11 +176,18 @@ public class Manager : MonoBehaviour
 		}
 	}
 
+	public void MakeInvincible(float time)
+	{
+		player.AddInvincibility(time);
+	}
+
 	public float GetPlayerNewtons()
 	{
 		return player.current_speed * player.current_size;
 
 	}
+	
+	
 
 	public void StopPlayer()
 	{

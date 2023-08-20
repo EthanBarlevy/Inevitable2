@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -55,9 +56,10 @@ public class Player : MonoBehaviour
     {
 		// woosh effect if speed is above some threshold
         if (game_state == Manager.GameState.GAMEPLAY)
-        { 
-            current_speed = player_body.velocity.x;
-        }
+        {
+			current_speed = player_body.velocity.x;
+			//player_body.AddForce(new Vector2(current_speed, 0));
+		}
 
         if (game_state == Manager.GameState.END_OF_RUN)
         {
@@ -67,31 +69,54 @@ public class Player : MonoBehaviour
         // up and down movement
         if (ascending)
         {
-            player_body.velocity = new Vector2(player_body.velocity.x, 5.0f);
+			// player_body.velocity = new Vector2(player_body.velocity.x, 5.0f);
+			player_body.AddForce(new Vector2(0, 600.0f * Time.deltaTime));
             // player_transform.localRotation.
 
             // keep player from going off the screen
             if (transform.position.y + player_sprite.size.y / 2 > 5)
             {
+
                 player_body.velocity = new Vector2(player_body.velocity.x, 0.0f);
-            }
+				//clamp to top of screen
+				transform.position = new Vector3(transform.position.x, 5, transform.position.z);
+
+			}
         }
         else
         {
             if (game_state == Manager.GameState.GAMEPLAY)
             {
-                player_body.velocity = new Vector2(player_body.velocity.x, -5.0f);
-            }
+				//player_body.velocity = new Vector2(player_body.velocity.x, -5.0f);
+				player_body.AddForce(new Vector2(0, -300.0f*Time.deltaTime));
+			}
 
-			// keep player from going off the screen
-			if (transform.position.y - player_sprite.size.y / 2 < -5)
+            // keep player from going off the screen
+            if (transform.position.y - player_sprite.size.y / 2 < -5)
             {
-				player_body.velocity = new Vector2(player_body.velocity.x, 0.0f);
+
+
+                player_body.velocity = new Vector2(player_body.velocity.x, 0.0f);
+				//remove all vertical force
+				
+				
+
 			}
 		}
 
-        // move the camera with the player
-        main_camera.transform.position = new Vector3(transform.position.x + camera_distance, main_camera.transform.position.y, main_camera.transform.position.z);
+		//wrap player within camera bounds if they go off screen
+		//if (transform.position.y + player_sprite.size.y / 2 > 5)
+		//{
+		//	transform.position = new Vector3(transform.position.x, -5 + player_sprite.size.y / 2);
+		//}
+		//else if (transform.position.y - player_sprite.size.y / 2 < -5)
+		//{
+		//	transform.position = new Vector3(transform.position.x, 5 - player_sprite.size.y / 2);
+		//}
+
+
+		// move the camera with the player
+		main_camera.transform.position = new Vector3(transform.position.x + camera_distance, main_camera.transform.position.y, main_camera.transform.position.z);
 
         // update size
         gameObject.transform.localScale = new Vector3(current_size, current_size, current_size);

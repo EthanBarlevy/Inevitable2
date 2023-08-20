@@ -47,6 +47,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b145690a2c69a1f4cb669329e8fec509, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawn_locations: []
+  powerups: []
 --- !u!1 &4193862992651162518
 GameObject:
   m_ObjectHideFlags: 0

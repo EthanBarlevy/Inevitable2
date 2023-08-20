@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 259230123304692904}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32,7 +32,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 259230123304692896}
   m_LocalRotation: {x: -0, y: -0, z: 0.4040881, w: 0.9147201}
-  m_LocalPosition: {x: -5.07, y: 0.022222223, z: 0}
+  m_LocalPosition: {x: -5.42, y: -0.36, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -105,7 +105,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player_data: {fileID: 11400000, guid: 5a65085290a0e9045ae3224047fde663, type: 2}
   main_camera: {fileID: 0}
-  game_manager: {fileID: 5881305619259638536, guid: 0b5db62cc730b7a4eaa181d16e146c43, type: 3}
   current_speed: -1
   current_size: -1
   camera_distance: 4
@@ -230,6 +229,8 @@ TrailRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
+  - {fileID: 2100000, guid: 7cfd1280a38df294f8e46566225deab1, type: 2}
+  - {fileID: 2100000, guid: 00d5b4b37bfe880469463fe75f871031, type: 2}
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -250,7 +251,7 @@ TrailRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 187577239
   m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Time: 1.5
   m_Parameters:
     serializedVersion: 3
@@ -281,7 +282,7 @@ TrailRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 0.6156863, g: 0.60784316, b: 0.7137255, a: 1}
+      key0: {r: 0.6156863, g: 0.60784316, b: 0.7137255, a: 0.5176471}
       key1: {r: 0.54901963, g: 0.7725491, b: 0.7960785, a: 0.49873126}
       key2: {r: 0.73627454, g: 0.9348443, b: 0.8789966, a: 0.41568628}
       key3: {r: 1, g: 1, b: 1, a: 0}
@@ -308,8 +309,8 @@ TrailRenderer:
       m_Mode: 0
       m_NumColorKeys: 4
       m_NumAlphaKeys: 3
-    numCornerVertices: 0
-    numCapVertices: 0
+    numCornerVertices: 4
+    numCapVertices: 20
     alignment: 0
     textureMode: 0
     shadowBias: 0.5
