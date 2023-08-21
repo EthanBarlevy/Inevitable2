@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8096174351803873032}
   - component: {fileID: 4602968765103240385}
   m_Layer: 0
-  m_Name: PlanetScreen1
+  m_Name: PlanetScreen1 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -423,7 +423,7 @@ SpriteRenderer:
   m_SortingLayerID: 187577239
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1263937074, guid: f78ed970e42e8234c98b680daa9e62bd, type: 3}
+  m_Sprite: {fileID: -587665603, guid: 8361204526e15034190a47475864c11c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -444,7 +444,7 @@ Animator:
   m_GameObject: {fileID: 7623792853712575020}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 92993259220d9284f9d199a04d5437b4, type: 2}
+  m_Controller: {fileID: 9100000, guid: 8fb3f7240cfa25f478bf932d85f4413d, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
