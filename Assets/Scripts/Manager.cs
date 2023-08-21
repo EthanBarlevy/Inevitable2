@@ -34,6 +34,7 @@ public class Manager : MonoBehaviour
 
 	[Header("Scene")]
 	[SerializeField] private GameObject endscene;
+	private GameObject endsceneObject;
 
 	public PlayerInput player_actions;
 	private InputAction start_game;
