@@ -13,7 +13,7 @@ public class Manager : MonoBehaviour
 	[SerializeField] Player player;
 	[SerializeField] Shop shop;
 	[SerializeField] GameObject world;
-	[SerializeField] Camera cam;
+	[SerializeField] GameObject cam;
 	public GameState game_state { get; private set; }
 
 	[Header("UI Prefabs")]
@@ -248,8 +248,8 @@ public class Manager : MonoBehaviour
 		//audio_impact.Play();
 		//spawn end scene
 		//Instantiate(endscene,cam.transform);
-		//spawn end scene in center of screen
-		Instantiate(endscene, new Vector3(0, 0, 0), cam.transform.rotation, cam.transform);
+		//spawn end scene in center of camera
+		Instantiate(endscene, new Vector3(cam.transform.position.x,0,0), cam.transform.rotation, world.transform);
 
 
 		player.ChangeSpeedAndSize(-player.current_speed, -player.current_size);

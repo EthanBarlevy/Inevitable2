@@ -32,6 +32,10 @@ public class Screen : MonoBehaviour
 		{
 			spawn.Add(new KeyValuePair<bool, int>(spawn_ice, 3));
 		}
+		if (spawn_empty)
+		{
+			spawn.Add(new KeyValuePair<bool, int>(spawn_empty, 0));
+		}
 
 		if (spawn.Count > 0)
 		{

@@ -211,6 +211,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Screen 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5802666752775189588, guid: ca88e04bb46ba784f88fdfbdb8620210, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6401466239165440004, guid: ca88e04bb46ba784f88fdfbdb8620210, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7749906077411927893, guid: ca88e04bb46ba784f88fdfbdb8620210, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -1522,6 +1530,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ec1f77c411ca2042b4f70f7eb503a7a, type: 3}
+--- !u!1 &1773743649 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9209911101217839658, guid: 3b6bef08dfb26aa439a2bff24e082c0e, type: 3}
+  m_PrefabInstance: {fileID: 9209911101503771868}
+  m_PrefabAsset: {fileID: 0}
 --- !u!20 &1930104568 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 9209911101217839652, guid: 3b6bef08dfb26aa439a2bff24e082c0e, type: 3}
@@ -1616,6 +1629,14 @@ PrefabInstance:
     - target: {fileID: 3790170648558408111, guid: ca88e04bb46ba784f88fdfbdb8620210, type: 3}
       propertyPath: m_Name
       value: Screen 1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5802666752775189588, guid: ca88e04bb46ba784f88fdfbdb8620210, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6401466239165440004, guid: ca88e04bb46ba784f88fdfbdb8620210, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7749906077411927893, guid: ca88e04bb46ba784f88fdfbdb8620210, type: 3}
       propertyPath: m_RootOrder
@@ -2034,7 +2055,7 @@ PrefabInstance:
     - target: {fileID: 5881305619259638536, guid: 0b5db62cc730b7a4eaa181d16e146c43, type: 3}
       propertyPath: cam
       value: 
-      objectReference: {fileID: 1930104568}
+      objectReference: {fileID: 1773743649}
     - target: {fileID: 5881305619259638536, guid: 0b5db62cc730b7a4eaa181d16e146c43, type: 3}
       propertyPath: shop
       value: 
