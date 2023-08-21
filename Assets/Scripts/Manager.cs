@@ -24,6 +24,7 @@ public class Manager : MonoBehaviour
 	public PlayerInput player_actions;
 	private InputAction start_game;
 	private int current_screen_number;
+	private int temp_rokxs;
 
 	[Header("Planet Distances")]
 	[SerializeField] int[] number_of_screens;
@@ -41,6 +42,7 @@ public class Manager : MonoBehaviour
 	{
 		game_state = GameState.START_GAME;
 		current_screen_number = 1;
+		temp_rokxs = 0;
 		HideUI();
 	}
 
@@ -97,6 +99,7 @@ public class Manager : MonoBehaviour
 			HideUI();
 			player.transform.position = new Vector3(-5, 0, 0);
 			current_screen_number = -1;
+			temp_rokxs = 0;
 			SpawnNextScreen();
 			SpawnNextScreen();
 			SpawnNextScreen();
@@ -144,6 +147,7 @@ public class Manager : MonoBehaviour
 
 	public void AddRokxs(int amount)
 	{
+		temp_rokxs += amount;
 		shop.rokxz += amount;
 	}
 
@@ -222,6 +226,11 @@ public class Manager : MonoBehaviour
 	public float GetStartSize()
 	{
 		return shop.size;
+	}
+
+	public int getCurrentRokxz()
+	{
+		return temp_rokxs;
 	}
 
 	public GameData GetData()

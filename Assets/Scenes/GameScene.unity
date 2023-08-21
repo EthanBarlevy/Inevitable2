@@ -1346,7 +1346,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5881305619259638536, guid: 0b5db62cc730b7a4eaa181d16e146c43, type: 3}
       propertyPath: number_of_screens.Array.size
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5881305619259638536, guid: 0b5db62cc730b7a4eaa181d16e146c43, type: 3}
       propertyPath: planet_screens.Array.data[0]
@@ -1354,15 +1354,23 @@ PrefabInstance:
       objectReference: {fileID: 1522584548200672928, guid: 64dd4a3f22fda2440a99227a41797aaa, type: 3}
     - target: {fileID: 5881305619259638536, guid: 0b5db62cc730b7a4eaa181d16e146c43, type: 3}
       propertyPath: number_of_screens.Array.data[0]
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5881305619259638536, guid: 0b5db62cc730b7a4eaa181d16e146c43, type: 3}
       propertyPath: number_of_screens.Array.data[1]
-      value: 8
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 5881305619259638536, guid: 0b5db62cc730b7a4eaa181d16e146c43, type: 3}
       propertyPath: number_of_screens.Array.data[2]
-      value: 16
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5881305619259638536, guid: 0b5db62cc730b7a4eaa181d16e146c43, type: 3}
+      propertyPath: number_of_screens.Array.data[3]
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 5881305619259638536, guid: 0b5db62cc730b7a4eaa181d16e146c43, type: 3}
+      propertyPath: number_of_screens.Array.data[4]
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 5881305619259638542, guid: 0b5db62cc730b7a4eaa181d16e146c43, type: 3}
       propertyPath: m_Name

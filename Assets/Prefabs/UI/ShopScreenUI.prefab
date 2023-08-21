@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2092987798585702813}
   - component: {fileID: 7478120436524443398}
+  - component: {fileID: 7388053648849002621}
   - component: {fileID: 5558285039758034787}
   m_Layer: 5
   m_Name: FirePrice
@@ -46,6 +47,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 69047838890627967}
   m_CullTransparentMesh: 1
+--- !u!114 &7388053648849002621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 69047838890627967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 641e0f525f710044e9e2011049d04d60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 9
 --- !u!114 &5558285039758034787
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -581,6 +595,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5114413887503660420}
   - component: {fileID: 126119474149311576}
+  - component: {fileID: 3437343033827490267}
   - component: {fileID: 4711876080983898409}
   m_Layer: 5
   m_Name: SpeedPrice
@@ -617,6 +632,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1601094160344299425}
   m_CullTransparentMesh: 1
+--- !u!114 &3437343033827490267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1601094160344299425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 641e0f525f710044e9e2011049d04d60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 1
 --- !u!114 &4711876080983898409
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -792,6 +820,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8334803466101024921}
   - component: {fileID: 7444470062927379445}
+  - component: {fileID: 650451440716492704}
   - component: {fileID: 4867708174275890051}
   m_Layer: 5
   m_Name: FireTimeVal
@@ -828,6 +857,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1907304107628133360}
   m_CullTransparentMesh: 1
+--- !u!114 &650451440716492704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1907304107628133360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 641e0f525f710044e9e2011049d04d60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 8
 --- !u!114 &4867708174275890051
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -927,6 +969,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5926773090991494391}
   - component: {fileID: 6083892615435281913}
+  - component: {fileID: 938663889891606402}
   - component: {fileID: 4734086936120225233}
   m_Layer: 5
   m_Name: BaseSpeedAmount
@@ -963,6 +1006,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2101822778833823578}
   m_CullTransparentMesh: 1
+--- !u!114 &938663889891606402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2101822778833823578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 641e0f525f710044e9e2011049d04d60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
 --- !u!114 &4734086936120225233
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1198,6 +1254,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2207546319611232801}
   - component: {fileID: 6181098095096934648}
+  - component: {fileID: 4716990368594124727}
   - component: {fileID: 8074822062670427336}
   m_Layer: 5
   m_Name: BaseSizeAmount
@@ -1234,6 +1291,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2373686232818963268}
   m_CullTransparentMesh: 1
+--- !u!114 &4716990368594124727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2373686232818963268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 641e0f525f710044e9e2011049d04d60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 2
 --- !u!114 &8074822062670427336
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1409,6 +1479,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4864729156877026115}
   - component: {fileID: 1256325193567367970}
+  - component: {fileID: 6538854284496169239}
   - component: {fileID: 2326470969622493268}
   m_Layer: 5
   m_Name: BoostFreqVal
@@ -1445,6 +1516,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2908965874929787462}
   m_CullTransparentMesh: 1
+--- !u!114 &6538854284496169239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2908965874929787462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 641e0f525f710044e9e2011049d04d60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 6
 --- !u!114 &2326470969622493268
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2821,6 +2905,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2177661901734761525}
   - component: {fileID: 7613702997793232565}
+  - component: {fileID: 238662785821234874}
   - component: {fileID: 5401795559978471910}
   m_Layer: 5
   m_Name: IceVal
@@ -2857,6 +2942,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4313865325115748246}
   m_CullTransparentMesh: 1
+--- !u!114 &238662785821234874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4313865325115748246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 641e0f525f710044e9e2011049d04d60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 12
 --- !u!114 &5401795559978471910
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3093,6 +3191,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4354978962169031699}
   - component: {fileID: 8681186928088991028}
+  - component: {fileID: 1875001810384616904}
   - component: {fileID: 7411924844076439644}
   m_Layer: 5
   m_Name: IceFreqPrice
@@ -3129,6 +3228,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4454972173696534790}
   m_CullTransparentMesh: 1
+--- !u!114 &1875001810384616904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4454972173696534790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 641e0f525f710044e9e2011049d04d60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 15
 --- !u!114 &7411924844076439644
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3592,6 +3704,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6577649305347305245}
   - component: {fileID: 726505876316823760}
+  - component: {fileID: 6002790212106603451}
   - component: {fileID: 5928832002424997593}
   m_Layer: 5
   m_Name: BoostPrice
@@ -3628,6 +3741,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6261229348621206359}
   m_CullTransparentMesh: 1
+--- !u!114 &6002790212106603451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6261229348621206359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 641e0f525f710044e9e2011049d04d60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 13
 --- !u!114 &5928832002424997593
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3727,6 +3853,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6913726603383157647}
   - component: {fileID: 282034910160371860}
+  - component: {fileID: 6435941718161382171}
   - component: {fileID: 7389720540724758200}
   m_Layer: 5
   m_Name: BoostFreqPrice
@@ -3763,6 +3890,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6280553069269154571}
   m_CullTransparentMesh: 1
+--- !u!114 &6435941718161382171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6280553069269154571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 641e0f525f710044e9e2011049d04d60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 7
 --- !u!114 &7389720540724758200
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4108,6 +4248,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5172386694166533354}
   - component: {fileID: 2125043594536238485}
+  - component: {fileID: 8552389133735238115}
   - component: {fileID: 8057116296578027009}
   m_Layer: 5
   m_Name: FireFreqVal
@@ -4144,6 +4285,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6651670087286118473}
   m_CullTransparentMesh: 1
+--- !u!114 &8552389133735238115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6651670087286118473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 641e0f525f710044e9e2011049d04d60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 10
 --- !u!114 &8057116296578027009
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4349,6 +4503,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5221157875121752392}
   - component: {fileID: 1203982167730112871}
+  - component: {fileID: 2012417337303063394}
   - component: {fileID: 7915394940124553976}
   m_Layer: 5
   m_Name: FireFreqPrice
@@ -4385,6 +4540,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6736370578670013301}
   m_CullTransparentMesh: 1
+--- !u!114 &2012417337303063394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6736370578670013301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 641e0f525f710044e9e2011049d04d60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 11
 --- !u!114 &7915394940124553976
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4618,6 +4786,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3595760197693735665}
   - component: {fileID: 6430798695069011272}
+  - component: {fileID: 4125846855532638558}
   - component: {fileID: 7342694613779933726}
   m_Layer: 5
   m_Name: IceFreqVal
@@ -4654,6 +4823,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7133503783798612867}
   m_CullTransparentMesh: 1
+--- !u!114 &4125846855532638558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7133503783798612867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 641e0f525f710044e9e2011049d04d60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 14
 --- !u!114 &7342694613779933726
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4753,6 +4935,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5045805371570371507}
   - component: {fileID: 1654430250863206915}
+  - component: {fileID: 4650719755715414015}
   - component: {fileID: 4919202951721600541}
   m_Layer: 5
   m_Name: SizePrice
@@ -4789,6 +4972,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7517244194919403721}
   m_CullTransparentMesh: 1
+--- !u!114 &4650719755715414015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7517244194919403721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 641e0f525f710044e9e2011049d04d60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 3
 --- !u!114 &4919202951721600541
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5696,6 +5892,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7342394979416175806}
   - component: {fileID: 3293572530981894801}
+  - component: {fileID: 3206811056621054379}
   - component: {fileID: 137845655573704419}
   m_Layer: 5
   m_Name: BoostVal
@@ -5732,6 +5929,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8406989242492577389}
   m_CullTransparentMesh: 1
+--- !u!114 &3206811056621054379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8406989242492577389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 641e0f525f710044e9e2011049d04d60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 4
 --- !u!114 &137845655573704419
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5831,6 +6041,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3695396545040774664}
   - component: {fileID: 2860954010000407091}
+  - component: {fileID: 299522256836403301}
   - component: {fileID: 7678516629556385118}
   m_Layer: 5
   m_Name: BoostPrice
@@ -5867,6 +6078,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8587933859567548956}
   m_CullTransparentMesh: 1
+--- !u!114 &299522256836403301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8587933859567548956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 641e0f525f710044e9e2011049d04d60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 5
 --- !u!114 &7678516629556385118
 MonoBehaviour:
   m_ObjectHideFlags: 0
