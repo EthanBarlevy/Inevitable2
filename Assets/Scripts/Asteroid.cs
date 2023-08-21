@@ -8,6 +8,7 @@ public class Asteroid : Damageable
     private float rotation;
     private Manager manager;
     [SerializeField] GameObject particle;
+    [SerializeField] AudioSource explode;
     void Start()
     {
         movement = new Vector2(Random.value, Random.value);
@@ -33,10 +34,13 @@ public class Asteroid : Damageable
 			manager.AddRokxs(value);
             Instantiate(particle, transform.position, transform.rotation);
 			Destroy(gameObject);
+			explode.Play();
 		}
 		else
 		{
 			manager.StopPlayer();
 		}
 	}
+
+	
 }

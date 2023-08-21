@@ -44,13 +44,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f83ba28ca120ac34488e6032db520997, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed_max: 0
+  size_max: 0
+  boost_speed_max: 0
   frequency_max: 5
   ice_amount_max: 5
+  audio_click: {fileID: 0}
   rokxz: 0
   speed: 0
+  speed_price: 0
+  size: 0
+  size_price: 0
   boost_speed: 0
+  boost_speed_price: 0
   boost_frequency: 0
+  boost_frequency_price: 0
   fire_time: 0
+  fire_time_price: 0
   fire_frequency: 0
+  fire_frequency_price: 0
   ice_amount: 0
+  ice_amount_price: 0
   ice_frequency: 0
+  ice_frequency_price: 0
