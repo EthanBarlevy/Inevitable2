@@ -34,6 +34,7 @@ public class Manager : MonoBehaviour
 
 	[Header("Scene")]
 	[SerializeField] private GameObject endscene;
+	private GameObject endsceneObject;
 
 	public PlayerInput player_actions;
 	private InputAction start_game;
@@ -136,7 +137,7 @@ public class Manager : MonoBehaviour
 			audio_flare.Play();
 			audio_rumble.Stop();
 			//endscene.GetComponent<cutscene>().sfx.Stop();
-			Destroy(endscene);
+			Destroy(endsceneObject);
 			end_of_planet_ui.SetActive(false);
 			
 			//Destroy(player);
@@ -270,7 +271,7 @@ public class Manager : MonoBehaviour
 		//spawn end scene in center of camera
 		player.ChangeSpeedAndSize(-player.current_speed, -player.current_size);
 		HideUI();
-		Instantiate(endscene, new Vector3(cam.transform.position.x,0,0), cam.transform.rotation, world.transform);
+		endsceneObject = Instantiate(endscene, new Vector3(cam.transform.position.x,0,0), cam.transform.rotation, world.transform);
 		//game_state = GameState.END_OF_RUN;
 	}
 
