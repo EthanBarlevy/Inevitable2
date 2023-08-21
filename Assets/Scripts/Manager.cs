@@ -30,7 +30,7 @@ public class Manager : MonoBehaviour
 	[SerializeField] private AudioSource audio_flare;
 	[SerializeField] private AudioSource audio_coin;
 	//[SerializeField] private AudioSource audio_impact;
-	//[SerializeField] private AudioSource audio_rumble;
+	[SerializeField] private AudioSource audio_rumble;
 
 	[Header("Scene")]
 	[SerializeField] private GameObject endscene;
@@ -114,13 +114,31 @@ public class Manager : MonoBehaviour
 		if (game_state == GameState.END_OF_RUN)
 		{
 			SetStateStartGame();
-			HideUI();
+			temp_rokxs = 0;
 			player.transform.position = new Vector3(-5, 0, 0);
 			current_screen_number = -1;
+			SpawnNextScreen();
+			SpawnNextScreen();
+			SpawnNextScreen();
+			audio_flare.Play();
+			//Destroy(player);
+			//player = Instantiate(player);
+		}
+		if(game_state == GameState.END_OF_PLANET)
+		{
+			SetStateStartGame();
 			temp_rokxs = 0;
+			player.transform.position = new Vector3(-5, 0, 0);
+			current_screen_number = -1;
 			SpawnNextScreen();
 			SpawnNextScreen();
 			SpawnNextScreen();
+			audio_flare.Play();
+			audio_rumble.Stop();
+			//endscene.GetComponent<cutscene>().sfx.Stop();
+			Destroy(endscene);
+			end_of_planet_ui.SetActive(false);
+			
 			//Destroy(player);
 			//player = Instantiate(player);
 		}
@@ -246,15 +264,13 @@ public class Manager : MonoBehaviour
 	{
 		audio_music.Stop();
 		//audio_impact.Play();
+		audio_rumble.Play();
 		//spawn end scene
 		//Instantiate(endscene,cam.transform);
 		//spawn end scene in center of camera
-		Instantiate(endscene, new Vector3(cam.transform.position.x,0,0), cam.transform.rotation, world.transform);
-
-
 		player.ChangeSpeedAndSize(-player.current_speed, -player.current_size);
 		HideUI();
-
+		Instantiate(endscene, new Vector3(cam.transform.position.x,0,0), cam.transform.rotation, world.transform);
 		//game_state = GameState.END_OF_RUN;
 	}
 

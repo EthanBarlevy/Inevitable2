@@ -205,7 +205,7 @@ GameObject:
   - component: {fileID: 4133402423721020682}
   m_Layer: 0
   m_Name: PlanetDestroy End
-  m_TagString: Untagged
+  m_TagString: Cutscene
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -239,7 +239,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce26144e1d5b18247a01e78c4745c246, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time_to_wait: 105
+  time_to_wait: 2
+  sfx: {fileID: 2639889026004149403}
   UI_sfx: {fileID: 4133402423721020682}
 --- !u!82 &4206181777641725909
 AudioSource:
@@ -253,13 +254,13 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 27a95c39c1bc4f145bd69c3396acad6a, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.44
+  m_Volume: 0.646
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 109
+  Priority: 128
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -348,10 +349,10 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 98da6a9fadc80c947ac6e362da1289bf, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 0.577
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -444,7 +445,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 617bf39a491c5304cba136d64f8a5a87, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 0.051
   m_Pitch: 1
   Loop: 0
