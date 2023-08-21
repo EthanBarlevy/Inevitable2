@@ -38,12 +38,13 @@ public class Manager : MonoBehaviour
 	public PlayerInput player_actions;
 	private InputAction start_game;
 	private int current_screen_number;
+	private int temp_rokxs;
 
 	[Header("Planet Distances")]
 	[SerializeField] int[] number_of_screens;
 
 	public enum GameState
-	{ 
+	{
 		START_GAME,
 		SHOP,
 		GAMEPLAY,
@@ -56,6 +57,7 @@ public class Manager : MonoBehaviour
 	{
 		game_state = GameState.START_GAME;
 		current_screen_number = 1;
+		temp_rokxs = 0;
 		HideUI();
 	}
 
@@ -63,7 +65,7 @@ public class Manager : MonoBehaviour
 	{
 		player.SetGameState(game_state);
 		switch (game_state)
-		{ 
+		{
 			case GameState.START_GAME:
 				start_screen_ui.SetActive(true);
 				break;
@@ -80,7 +82,7 @@ public class Manager : MonoBehaviour
 				end_of_planet_ui.SetActive(true);
 				break;
 			case GameState.CUTSCENE:
-				
+
 				break;
 		}
 	}
@@ -110,11 +112,12 @@ public class Manager : MonoBehaviour
 			player.StartGame();
 		}
 		if (game_state == GameState.END_OF_RUN)
-		{ 
+		{
 			SetStateStartGame();
 			HideUI();
 			player.transform.position = new Vector3(-5, 0, 0);
 			current_screen_number = -1;
+			temp_rokxs = 0;
 			SpawnNextScreen();
 			SpawnNextScreen();
 			SpawnNextScreen();
@@ -154,12 +157,12 @@ public class Manager : MonoBehaviour
 	}
 
 	public void QuitGame()
-	{ 
+	{
 		Application.Quit();
 	}
 
 	private void HideUI()
-	{ 
+	{
 		start_screen_ui.SetActive(false);
 		shop_screen_ui.SetActive(false);
 		in_game_screen_ui.SetActive(false);
@@ -168,7 +171,7 @@ public class Manager : MonoBehaviour
 
 	public void AddRokxs(int amount)
 	{
-		audio_coin.Play();
+		temp_rokxs += amount;
 		shop.rokxz += amount;
 	}
 
@@ -202,7 +205,7 @@ public class Manager : MonoBehaviour
 	}
 
 	public void AffectPlayer(float speed, float size)
-	{ 
+	{
 		player.ChangeSpeedAndSize(-speed, -size);
 		if (player.current_size < 0.2)
 		{
@@ -251,7 +254,7 @@ public class Manager : MonoBehaviour
 
 		player.ChangeSpeedAndSize(-player.current_speed, -player.current_size);
 		HideUI();
-		
+
 		//game_state = GameState.END_OF_RUN;
 	}
 
@@ -259,7 +262,7 @@ public class Manager : MonoBehaviour
 	{
 		game_state = GameState.END_OF_PLANET;
 	}
-	
+
 	public float GetStartSpeed()
 	{
 		return shop.speed;
@@ -270,8 +273,13 @@ public class Manager : MonoBehaviour
 		return shop.size;
 	}
 
+	public int getCurrentRokxz()
+	{
+		return temp_rokxs;
+	}
+
 	public GameData GetData()
-	{ 
+	{
 		return new GameData(shop.rokxz, shop.speed, shop.size, shop.boost_speed, shop.boost_frequency, shop.fire_time, shop.boost_frequency, shop.ice_amount, shop.ice_frequency, new System.Numerics.BigInteger());
 	}
 }

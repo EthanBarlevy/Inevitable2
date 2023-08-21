@@ -36,69 +36,73 @@ public class Shop : MonoBehaviour, IDataPersistance
 
 	public void BuySpeed()
 	{
-		//audio_click.Play();
-		if (speed < speed_max)
+		if(speed < speed_max && rokxz >= (int)Mathf.Pow(300, (speed / 2)))
 		{
-			rokxz -= (int)speed_price;
-			speed += 0.1f;
-			audio_click.Play();
+			rokxz -= (int)Mathf.Pow(300, (speed / 2));
+			speed++;
 		}
     }
 
 	public void BuySize()
 	{
-		audio_click.Play();
-		if (size < size_max)
+		if (size < size_max && rokxz >= (int)Mathf.Pow(500, (size / 2)))
 		{
+			rokxz -= (int)Mathf.Pow(500, (size / 2));
 			size += 0.3f;
 		}
 	}
 
 	public void BuyBoostSpeed()
 	{
-		audio_click.Play();
-		if (speed < boost_speed_max)
+		if (boost_speed < boost_speed_max && rokxz >= (int)Mathf.Pow(450, (boost_speed / 2)))
 		{
-			boost_speed++;
+			rokxz -= (int)Mathf.Pow(450, (boost_speed / 2));
+			boost_speed += 0.5f;
 		}
 	}
 
 	public void BuyBoostFrequency()
 	{
-		audio_click.Play();
-		if (boost_frequency < frequency_max)
-		{ 
-			boost_frequency++;
+		if (boost_frequency < frequency_max && rokxz >= (int)Mathf.Pow(1000, (boost_frequency / 2)))
+		{
+			rokxz -= (int)Mathf.Pow(1000, ((boost_frequency + 2) / 2));
+			boost_frequency += 0.01f;
 		}
 	}
 
 	public void BuyFireTime()
 	{
-		fire_time++;
+		if (rokxz >= (int)Mathf.Pow(300, (fire_time / 2)))
+		{
+			rokxz -= (int)Mathf.Pow(300, (fire_time / 2));
+			fire_time += 0.5f;
+		}
 	}
 
 	public void BuyFireFrequency()
 	{
-		//fire_frequency++;
-		if (fire_frequency < frequency_max)
-		{ 
-			fire_frequency++;
+		if (fire_frequency < frequency_max && rokxz >= (int)Mathf.Pow(1000, (fire_frequency / 2)))
+		{
+			rokxz -= (int)Mathf.Pow(1000, ((fire_frequency + 2) / 2));
+			fire_frequency += 0.01f;
 		}
 	}
 
 	public void BuyIceAmount()
 	{
-		if (ice_amount < ice_amount_max)
-		{ 
-			ice_amount++;
+		if (ice_amount < ice_amount_max && rokxz >= (int)Mathf.Pow(800, (ice_amount / 2)))
+		{
+			rokxz -= (int)Mathf.Pow(800, (ice_amount / 2));
+			ice_amount += 0.1f;
 		}
 	}
 
 	public void BuyIceFrequency()
 	{
-		if (ice_frequency < frequency_max)
-		{ 
-			ice_frequency++;
+		if (ice_frequency < frequency_max && rokxz >= (int)Mathf.Pow(1000, (ice_frequency / 2)))
+		{
+			rokxz -= (int)Mathf.Pow(1000, ((ice_frequency + 2) / 2));
+			ice_frequency += 0.01f;
 		}
 	}
 

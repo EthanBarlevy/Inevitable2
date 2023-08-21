@@ -18,6 +18,7 @@ public class Player : MonoBehaviour
     [SerializeField] public float current_speed = -1;
     [SerializeField] public float current_size = -1;
     [SerializeField] private int camera_distance = 0;
+    [SerializeField] private GameObject woosh;
 
     public PlayerInput player_actions;
     private InputAction ascend;
@@ -116,7 +117,25 @@ public class Player : MonoBehaviour
         {
             invincibility_time -= Time.deltaTime;
         }
-    }
+
+        // i really tried but it looks bad
+		List<Woosh> children = new List<Woosh>();
+		foreach (Woosh child in gameObject.GetComponentsInChildren<Woosh>())
+		{
+			children.Add(child);
+		}
+        if (game_state == Manager.GameState.GAMEPLAY)
+        { 
+            if (children.Count <= 0 && current_speed > 20)
+            { 
+                //Instantiate(woosh, new Vector3(transform.position.x + 11, -5, 0), Quaternion.identity);
+            }
+            if (current_speed < 20 && children.Count >= 1)
+            {
+                //Destroy(children[0].gameObject);
+            }
+        }
+	}
 
     public void SetGameState(Manager.GameState new_state)
     {
@@ -127,10 +146,25 @@ public class Player : MonoBehaviour
     public void ChangeSpeedAndSize(float speed, float size)
     {
         if (invincibility_time <= 0)
-        { 
-            current_speed += speed;
-            current_size += size;
+        {
+            if (speed < 0)
+            {
+				current_speed += speed;
+			}
+            if (size < 0)
+            {
+				current_size += size;
+			}
         }
+
+        if (speed > 0)
+        {
+			current_speed += speed;
+		}
+        if (size > 0 && current_size < 4)
+        {
+			current_size += size;
+		}
 
         player_body.velocity = new Vector3(current_speed, player_body.velocity.y);
     }
