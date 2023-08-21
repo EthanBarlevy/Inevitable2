@@ -36,16 +36,16 @@ public class Shop : MonoBehaviour, IDataPersistance
 	public int ice_frequency_price;
 	public void BuySpeed()
 	{
-		if(speed < speed_max && rokxz >= (int)Mathf.Pow(300, (speed / 2)))
+		if(speed < speed_max && rokxz >= (int)Mathf.Pow(3, (speed / 2)))
 		{
-			rokxz -= (int)Mathf.Pow(30, (speed / 2));
+			rokxz -= (int)Mathf.Pow(3, (speed / 2));
 			speed++;
 		}
     }
 
 	public void BuySize()
 	{
-		if (size < size_max && rokxz >= (int)Mathf.Pow(500, (size / 2)))
+		if (size < size_max && rokxz >= (int)Mathf.Pow(50, (size / 2)))
 		{
 			rokxz -= (int)Mathf.Pow(50, (size / 2));
 			size += 0.3f;
@@ -54,16 +54,16 @@ public class Shop : MonoBehaviour, IDataPersistance
 
 	public void BuyBoostSpeed()
 	{
-		if (boost_speed < boost_speed_max && rokxz >= (int)Mathf.Pow(450, (boost_speed / 2)))
+		if (boost_speed < boost_speed_max && rokxz >= (int)Mathf.Pow(45, (boost_speed / 2)))
 		{
-			rokxz -= (int)Mathf.Pow(450, (boost_speed / 2));
+			rokxz -= (int)Mathf.Pow(45, (boost_speed / 2));
 			boost_speed += 0.5f;
 		}
 	}
 
 	public void BuyBoostFrequency()
 	{
-		if (boost_frequency < frequency_max && rokxz >= (int)Mathf.Pow(1000, (boost_frequency / 2)))
+		if (boost_frequency < frequency_max && rokxz >= (int)Mathf.Pow(100, (boost_frequency / 2)))
 		{
 			rokxz -= (int)Mathf.Pow(100, ((boost_frequency + 2) / 2));
 			boost_frequency += 0.01f;
@@ -81,7 +81,7 @@ public class Shop : MonoBehaviour, IDataPersistance
 
 	public void BuyFireFrequency()
 	{
-		if (fire_frequency < frequency_max && rokxz >= (int)Mathf.Pow(1000, (fire_frequency / 2)))
+		if (fire_frequency < frequency_max && rokxz >= (int)Mathf.Pow(100, (fire_frequency / 2)))
 		{
 			rokxz -= (int)Mathf.Pow(100, ((fire_frequency + 2) / 2));
 			fire_frequency += 0.01f;
@@ -90,7 +90,7 @@ public class Shop : MonoBehaviour, IDataPersistance
 
 	public void BuyIceAmount()
 	{
-		if (ice_amount < ice_amount_max && rokxz >= (int)Mathf.Pow(800, (ice_amount / 2)))
+		if (ice_amount < ice_amount_max && rokxz >= (int)Mathf.Pow(80, (ice_amount / 2)))
 		{
 			rokxz -= (int)Mathf.Pow(80, (ice_amount / 2));
 			ice_amount += 0.1f;
@@ -99,7 +99,7 @@ public class Shop : MonoBehaviour, IDataPersistance
 
 	public void BuyIceFrequency()
 	{
-		if (ice_frequency < frequency_max && rokxz >= (int)Mathf.Pow(1000, (ice_frequency / 2)))
+		if (ice_frequency < frequency_max && rokxz >= (int)Mathf.Pow(100, (ice_frequency / 2)))
 		{
 			rokxz -= (int)Mathf.Pow(100, ((ice_frequency + 2) / 2));
 			ice_frequency += 0.01f;

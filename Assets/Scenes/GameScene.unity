@@ -1396,6 +1396,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: Shop, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 955667618674099294, guid: 1ec1f77c411ca2042b4f70f7eb503a7a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 836309637}
+    - target: {fileID: 955667618674099294, guid: 1ec1f77c411ca2042b4f70f7eb503a7a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BuySize
+      objectReference: {fileID: 0}
     - target: {fileID: 2007106591404292674, guid: 1ec1f77c411ca2042b4f70f7eb503a7a, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1526,7 +1534,55 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6670410085568673618, guid: 1ec1f77c411ca2042b4f70f7eb503a7a, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6713050081831830797, guid: 1ec1f77c411ca2042b4f70f7eb503a7a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 836309637}
+    - target: {fileID: 6713050081831830797, guid: 1ec1f77c411ca2042b4f70f7eb503a7a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BuyBoostFrequency
+      objectReference: {fileID: 0}
+    - target: {fileID: 6750546883599480022, guid: 1ec1f77c411ca2042b4f70f7eb503a7a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 836309637}
+    - target: {fileID: 6750546883599480022, guid: 1ec1f77c411ca2042b4f70f7eb503a7a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BuyFireFrequency
+      objectReference: {fileID: 0}
+    - target: {fileID: 7365644053934383386, guid: 1ec1f77c411ca2042b4f70f7eb503a7a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 836309637}
+    - target: {fileID: 7365644053934383386, guid: 1ec1f77c411ca2042b4f70f7eb503a7a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BuyBoostSpeed
+      objectReference: {fileID: 0}
+    - target: {fileID: 7371491437097561929, guid: 1ec1f77c411ca2042b4f70f7eb503a7a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 836309637}
+    - target: {fileID: 7371491437097561929, guid: 1ec1f77c411ca2042b4f70f7eb503a7a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BuyIceFrequency
+      objectReference: {fileID: 0}
+    - target: {fileID: 7559360889963838751, guid: 1ec1f77c411ca2042b4f70f7eb503a7a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 836309637}
+    - target: {fileID: 7559360889963838751, guid: 1ec1f77c411ca2042b4f70f7eb503a7a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BuyFireTime
+      objectReference: {fileID: 0}
+    - target: {fileID: 8850371752448461589, guid: 1ec1f77c411ca2042b4f70f7eb503a7a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 836309637}
+    - target: {fileID: 8850371752448461589, guid: 1ec1f77c411ca2042b4f70f7eb503a7a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BuyIceAmount
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ec1f77c411ca2042b4f70f7eb503a7a, type: 3}
