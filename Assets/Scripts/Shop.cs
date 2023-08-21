@@ -17,28 +17,28 @@ public class Shop : MonoBehaviour, IDataPersistance
 	[Header("CurrentPurchases")]
 	public int rokxz;
 	public float speed;
-	public int speed_price;
 	public float size;
-	public int size_price;
 	public float boost_speed;
-	public int boost_speed_price;
 	public float boost_frequency;
-	public int boost_frequency_price;
 	public float fire_time;
-	public int fire_time_price;
 	public float fire_frequency;
-	public int fire_frequency_price;
 	public float ice_amount;
-	public int ice_amount_price;
 	public float ice_frequency;
+
+	[Header("Prices")]
+	public int speed_price;
+	public int size_price;
+	public int boost_speed_price;
+	public int boost_frequency_price;
+	public int fire_time_price;
+	public int fire_frequency_price;
+	public int ice_amount_price;
 	public int ice_frequency_price;
-
-
 	public void BuySpeed()
 	{
 		if(speed < speed_max && rokxz >= (int)Mathf.Pow(300, (speed / 2)))
 		{
-			rokxz -= (int)Mathf.Pow(300, (speed / 2));
+			rokxz -= (int)Mathf.Pow(30, (speed / 2));
 			speed++;
 		}
     }
@@ -47,7 +47,7 @@ public class Shop : MonoBehaviour, IDataPersistance
 	{
 		if (size < size_max && rokxz >= (int)Mathf.Pow(500, (size / 2)))
 		{
-			rokxz -= (int)Mathf.Pow(500, (size / 2));
+			rokxz -= (int)Mathf.Pow(50, (size / 2));
 			size += 0.3f;
 		}
 	}
@@ -65,16 +65,16 @@ public class Shop : MonoBehaviour, IDataPersistance
 	{
 		if (boost_frequency < frequency_max && rokxz >= (int)Mathf.Pow(1000, (boost_frequency / 2)))
 		{
-			rokxz -= (int)Mathf.Pow(1000, ((boost_frequency + 2) / 2));
+			rokxz -= (int)Mathf.Pow(100, ((boost_frequency + 2) / 2));
 			boost_frequency += 0.01f;
 		}
 	}
 
 	public void BuyFireTime()
 	{
-		if (rokxz >= (int)Mathf.Pow(300, (fire_time / 2)))
+		if (rokxz >= (int)Mathf.Pow(30, (fire_time / 2)))
 		{
-			rokxz -= (int)Mathf.Pow(300, (fire_time / 2));
+			rokxz -= (int)Mathf.Pow(30, (fire_time / 2));
 			fire_time += 0.5f;
 		}
 	}
@@ -83,7 +83,7 @@ public class Shop : MonoBehaviour, IDataPersistance
 	{
 		if (fire_frequency < frequency_max && rokxz >= (int)Mathf.Pow(1000, (fire_frequency / 2)))
 		{
-			rokxz -= (int)Mathf.Pow(1000, ((fire_frequency + 2) / 2));
+			rokxz -= (int)Mathf.Pow(100, ((fire_frequency + 2) / 2));
 			fire_frequency += 0.01f;
 		}
 	}
@@ -92,7 +92,7 @@ public class Shop : MonoBehaviour, IDataPersistance
 	{
 		if (ice_amount < ice_amount_max && rokxz >= (int)Mathf.Pow(800, (ice_amount / 2)))
 		{
-			rokxz -= (int)Mathf.Pow(800, (ice_amount / 2));
+			rokxz -= (int)Mathf.Pow(80, (ice_amount / 2));
 			ice_amount += 0.1f;
 		}
 	}
@@ -101,7 +101,7 @@ public class Shop : MonoBehaviour, IDataPersistance
 	{
 		if (ice_frequency < frequency_max && rokxz >= (int)Mathf.Pow(1000, (ice_frequency / 2)))
 		{
-			rokxz -= (int)Mathf.Pow(1000, ((ice_frequency + 2) / 2));
+			rokxz -= (int)Mathf.Pow(100, ((ice_frequency + 2) / 2));
 			ice_frequency += 0.01f;
 		}
 	}

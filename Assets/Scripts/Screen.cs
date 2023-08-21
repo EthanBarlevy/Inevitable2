@@ -9,6 +9,7 @@ public class Screen : MonoBehaviour
 	[SerializeField] GameObject boost_powerup;
 	[SerializeField] GameObject fire_powerup;
 	[SerializeField] GameObject ice_powerup;
+	[SerializeField] GameObject empty_powerup;
 
 	private void Start()
 	{
@@ -16,6 +17,7 @@ public class Screen : MonoBehaviour
 		bool spawn_speed = Random.value < data.boost_frequency;
 		bool spawn_fire = Random.value < data.fire_frequency;
 		bool spawn_ice = Random.value < data.ice_frequency;
+		bool spawn_empty = Random.value < 2;
 		List<KeyValuePair<bool, int>> spawn = new List<KeyValuePair<bool, int>>();
 
 		if(spawn_speed) 
