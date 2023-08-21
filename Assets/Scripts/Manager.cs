@@ -116,11 +116,9 @@ public class Manager : MonoBehaviour
 		{
 			SetStateStartGame();
 			temp_rokxs = 0;
-			player.transform.position = new Vector3(-5, 0, 0);
+			player.transform.position = new Vector3(10, 0, 0);
 			current_screen_number = -1;
-			SpawnNextScreen();
-			SpawnNextScreen();
-			SpawnNextScreen();
+			SpawnStartScreens();
 			audio_flare.Play();
 			//Destroy(player);
 			//player = Instantiate(player);
@@ -129,11 +127,9 @@ public class Manager : MonoBehaviour
 		{
 			SetStateStartGame();
 			temp_rokxs = 0;
-			player.transform.position = new Vector3(-5, 0, 0);
+			player.transform.position = new Vector3(10, 0, 0);
 			current_screen_number = -1;
-			SpawnNextScreen();
-			SpawnNextScreen();
-			SpawnNextScreen();
+			SpawnStartScreens();
 			audio_flare.Play();
 			audio_rumble.Stop();
 			//endscene.GetComponent<cutscene>().sfx.Stop();
@@ -229,6 +225,32 @@ public class Manager : MonoBehaviour
 		}
 		Destroy(children[0].gameObject);
 		current_screen_number++;
+	}
+
+	public void SpawnStartScreens()
+	{
+		//destroy all current screens
+		List<Screen> children = new List<Screen>();
+		foreach (Screen child in world.GetComponentsInChildren<Screen>())
+		{
+
+			children.Add(child);
+		}
+		foreach (Screen child in children)
+		{
+			Destroy(child.gameObject);
+		}
+		//loop 3
+		for (int i = 0; i < 3; i++)
+		{
+
+			GameObject next_screen;
+			
+				next_screen = screens[Random.Range(0, screens.Length - 1)];
+			
+			Instantiate(next_screen, new Vector3(9.6f + 19.2f * current_screen_number, 0, 0), world.transform.rotation, world.transform);
+			current_screen_number++;
+		}
 	}
 
 	public void AffectPlayer(float speed, float size)
