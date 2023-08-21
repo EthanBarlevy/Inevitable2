@@ -33,8 +33,8 @@ public class Asteroid : Damageable
 			manager.AffectPlayer(speed, size);
 			manager.AddRokxs(value);
             Instantiate(particle, transform.position, transform.rotation);
-			Destroy(gameObject);
 			explode.Play();
+			Destroy(gameObject);
 		}
 		else
 		{

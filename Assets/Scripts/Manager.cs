@@ -136,7 +136,14 @@ public class Manager : MonoBehaviour
 			audio_flare.Play();
 			audio_rumble.Stop();
 			//endscene.GetComponent<cutscene>().sfx.Stop();
-			Destroy(endscene);
+
+			List<cutscene> children = new List<cutscene>();
+			foreach (cutscene child in world.GetComponentsInChildren<cutscene>())
+			{
+				children.Add(child);
+			}
+
+			Destroy(children[0].gameObject);
 			end_of_planet_ui.SetActive(false);
 			
 			//Destroy(player);
@@ -189,6 +196,7 @@ public class Manager : MonoBehaviour
 
 	public void AddRokxs(int amount)
 	{
+		audio_coin.Play();
 		temp_rokxs += amount;
 		shop.rokxz += amount;
 	}
@@ -271,6 +279,8 @@ public class Manager : MonoBehaviour
 		player.ChangeSpeedAndSize(-player.current_speed, -player.current_size);
 		HideUI();
 		Instantiate(endscene, new Vector3(cam.transform.position.x,0,0), cam.transform.rotation, world.transform);
+		//endscene.SetActive(true);
+		//endscene.transform.position = new Vector3(cam.transform.position.x, 0, 0);
 		//game_state = GameState.END_OF_RUN;
 	}
 
