@@ -27,7 +27,7 @@ public class Planet : Damageable
 		}
 		else
 		{
-			manager.StopPlayer();
+			manager.StopPlayerPlanet();
 		}
 	}
 }

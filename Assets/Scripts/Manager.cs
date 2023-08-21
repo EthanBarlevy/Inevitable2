@@ -13,6 +13,7 @@ public class Manager : MonoBehaviour
 	[SerializeField] Player player;
 	[SerializeField] Shop shop;
 	[SerializeField] GameObject world;
+	[SerializeField] Camera cam;
 	public GameState game_state { get; private set; }
 
 	[Header("UI Prefabs")]
@@ -20,6 +21,19 @@ public class Manager : MonoBehaviour
 	[SerializeField] GameObject shop_screen_ui;
 	[SerializeField] GameObject in_game_screen_ui;
 	[SerializeField] GameObject end_of_run_ui;
+	[SerializeField] GameObject end_of_planet_ui;
+
+	[Header("Sounds")]
+	[SerializeField] private AudioSource audio_click;
+	[SerializeField] private AudioSource audio_music;
+	[SerializeField] private AudioSource audio_ambience;
+	[SerializeField] private AudioSource audio_flare;
+	[SerializeField] private AudioSource audio_coin;
+	//[SerializeField] private AudioSource audio_impact;
+	//[SerializeField] private AudioSource audio_rumble;
+
+	[Header("Scene")]
+	[SerializeField] private GameObject endscene;
 
 	public PlayerInput player_actions;
 	private InputAction start_game;
@@ -30,11 +44,12 @@ public class Manager : MonoBehaviour
 	[SerializeField] int[] number_of_screens;
 
 	public enum GameState
-	{ 
+	{
 		START_GAME,
 		SHOP,
 		GAMEPLAY,
 		END_OF_RUN,
+		END_OF_PLANET,
 		CUTSCENE
 	}
 
@@ -50,7 +65,7 @@ public class Manager : MonoBehaviour
 	{
 		player.SetGameState(game_state);
 		switch (game_state)
-		{ 
+		{
 			case GameState.START_GAME:
 				start_screen_ui.SetActive(true);
 				break;
@@ -63,8 +78,11 @@ public class Manager : MonoBehaviour
 			case GameState.END_OF_RUN:
 				end_of_run_ui.SetActive(true);
 				break;
+			case GameState.END_OF_PLANET:
+				end_of_planet_ui.SetActive(true);
+				break;
 			case GameState.CUTSCENE:
-				
+
 				break;
 		}
 	}
@@ -94,7 +112,7 @@ public class Manager : MonoBehaviour
 			player.StartGame();
 		}
 		if (game_state == GameState.END_OF_RUN)
-		{ 
+		{
 			SetStateStartGame();
 			HideUI();
 			player.transform.position = new Vector3(-5, 0, 0);
@@ -110,18 +128,24 @@ public class Manager : MonoBehaviour
 
 	public void SetStateStartGame()
 	{
+		audio_music.Stop();
+		audio_ambience.Play();
 		game_state = GameState.START_GAME;
 		HideUI();
 	}
 
 	public void SetStateGameplay()
 	{
+		audio_flare.Play();
 		game_state = GameState.GAMEPLAY;
 		HideUI();
+		audio_ambience.Stop();
+		audio_music.Play();
 	}
 
 	public void SetStateShop()
 	{
+		audio_click.Play();
 		game_state = GameState.SHOP;
 		HideUI();
 	}
@@ -133,12 +157,12 @@ public class Manager : MonoBehaviour
 	}
 
 	public void QuitGame()
-	{ 
+	{
 		Application.Quit();
 	}
 
 	private void HideUI()
-	{ 
+	{
 		start_screen_ui.SetActive(false);
 		shop_screen_ui.SetActive(false);
 		in_game_screen_ui.SetActive(false);
@@ -181,7 +205,7 @@ public class Manager : MonoBehaviour
 	}
 
 	public void AffectPlayer(float speed, float size)
-	{ 
+	{
 		player.ChangeSpeedAndSize(-speed, -size);
 		if (player.current_size < 0.2)
 		{
@@ -218,6 +242,27 @@ public class Manager : MonoBehaviour
 		game_state = GameState.END_OF_RUN;
 	}
 
+	public void StopPlayerPlanet()
+	{
+		audio_music.Stop();
+		//audio_impact.Play();
+		//spawn end scene
+		//Instantiate(endscene,cam.transform);
+		//spawn end scene in center of screen
+		Instantiate(endscene, new Vector3(0, 0, 0), cam.transform.rotation, cam.transform);
+
+
+		player.ChangeSpeedAndSize(-player.current_speed, -player.current_size);
+		HideUI();
+
+		//game_state = GameState.END_OF_RUN;
+	}
+
+	public void SetToDarkTextEnd()
+	{
+		game_state = GameState.END_OF_PLANET;
+	}
+
 	public float GetStartSpeed()
 	{
 		return shop.speed;
@@ -234,7 +279,7 @@ public class Manager : MonoBehaviour
 	}
 
 	public GameData GetData()
-	{ 
+	{
 		return new GameData(shop.rokxz, shop.speed, shop.size, shop.boost_speed, shop.boost_frequency, shop.fire_time, shop.boost_frequency, shop.ice_amount, shop.ice_frequency, new System.Numerics.BigInteger());
 	}
 }

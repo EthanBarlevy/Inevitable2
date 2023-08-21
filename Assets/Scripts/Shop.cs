@@ -12,22 +12,32 @@ public class Shop : MonoBehaviour, IDataPersistance
 	[SerializeField] private float frequency_max;
 	[SerializeField] private float ice_amount_max;
 
+	[SerializeField] private AudioSource audio_click;
+
 	[Header("CurrentPurchases")]
 	public int rokxz;
 	public float speed;
+	public int speed_price;
 	public float size;
+	public int size_price;
 	public float boost_speed;
+	public int boost_speed_price;
 	public float boost_frequency;
+	public int boost_frequency_price;
 	public float fire_time;
+	public int fire_time_price;
 	public float fire_frequency;
+	public int fire_frequency_price;
 	public float ice_amount;
+	public int ice_amount_price;
 	public float ice_frequency;
+	public int ice_frequency_price;
 
 
 	public void BuySpeed()
 	{
-		if(speed < speed_max && rokxz >= (int)Mathf.Pow(300, (speed / 2))) 
-		{ 
+		if(speed < speed_max && rokxz >= (int)Mathf.Pow(300, (speed / 2)))
+		{
 			rokxz -= (int)Mathf.Pow(300, (speed / 2));
 			speed++;
 		}
